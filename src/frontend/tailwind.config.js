@@ -16,8 +16,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Bricolage Grotesque", "sans-serif"],
-        body: ["Outfit", "sans-serif"],
+        display: ['Bricolage Grotesque', 'sans-serif'],
+        body: ['Outfit', 'sans-serif'],
       },
       colors: {
         border: "oklch(var(--border))",
@@ -75,14 +75,11 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        "2xl": "1rem",
-        "3xl": "1.5rem",
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgba(0,0,0,0.05)",
-        glow: "0 0 40px oklch(0.65 0.24 278 / 0.3)",
-        "glow-sm": "0 0 20px oklch(0.65 0.24 278 / 0.2)",
-        "glow-accent": "0 0 30px oklch(0.72 0.19 195 / 0.3)",
+        glow: "0 0 30px oklch(0.65 0.25 265 / 0.3)",
+        "glow-accent": "0 0 30px oklch(0.70 0.20 310 / 0.3)",
       },
       keyframes: {
         "accordion-down": {

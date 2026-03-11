@@ -6,16 +6,15 @@ New project. No existing code.
 ## Requested Changes (Diff)
 
 ### Add
-- Navigation bar: Home, Mock Interview, Resume Analyzer, Practice Questions, Dashboard + dark/light mode toggle
-- Hero section with headline, description, and two CTA buttons
-- AI Mock Interview: job role selector, chat-style Q&A interface, answer submission
-- AI Answer Feedback: per-answer feedback with correctness, communication quality, improvement suggestions, confidence score
-- Resume Analyzer: PDF file upload UI, extracted skills display, personalized interview questions, card layout
-- Smart Question Generator: role/topic/difficulty dropdowns, question list with model answers
-- Performance Dashboard: session scores, strengths/weaknesses, progress bars, charts, session history
+- Home page with hero section, CTA buttons, feature cards
+- AI Mock Interview: select job role, chat-style Q&A interface, one question at a time
+- AI Answer Feedback: scoring on correctness, communication quality, suggestions
+- Resume Analyzer: upload PDF, extract skills, generate personalized questions
+- Smart Question Generator: filter by role, topic, difficulty
+- Performance Dashboard: scores, strengths/weaknesses, progress bars, charts
 - Dark/light mode toggle
-- Smooth page transitions and micro-animations
-- Fully responsive layout
+- Navigation bar with all sections
+- Smooth animations and responsive design
 
 ### Modify
 N/A
@@ -24,8 +23,20 @@ N/A
 N/A
 
 ## Implementation Plan
-1. Backend: Store interview sessions, questions, answers, feedback, and resume analysis results
-2. Frontend: Multi-page React app with all sections, mock AI logic, gradient UI, dark mode
-3. Mock AI data: Smart question banks per role/topic/difficulty, feedback generation logic
-4. Charts: Performance metrics using recharts or similar
-5. File upload: Resume upload UI (simulated parsing)
+
+### Backend (Motoko)
+- Store interview sessions with questions, answers, scores
+- Store generated questions by role/topic/difficulty
+- Store resume analysis results (skills, generated questions)
+- Store performance history per user (scores, strengths, weaknesses)
+- APIs: createSession, submitAnswer, getSessionResults, generateQuestions, analyzeResume, getPerformanceHistory
+
+### Frontend (React + TypeScript)
+- Navigation bar with links to all sections + dark/light mode toggle
+- Home: hero section with gradient, feature cards, CTAs
+- Mock Interview: role selector, chat interface, question display, answer input
+- Resume Analyzer: PDF upload dropzone, skill chips, personalized questions list
+- Practice Questions: filters (role, topic, difficulty), question cards
+- Dashboard: score overview, bar/progress charts, strengths/weaknesses lists
+- Simulated AI feedback logic on frontend using question banks and scoring rules
+- Responsive layout for mobile and desktop
